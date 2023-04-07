@@ -1,0 +1,54 @@
+->Insert statements for the User table:
+
+INSERT INTO User (first_name, last_name, email, password, account_status)
+VALUES ('Subham', 'Kadave', 'shubhamkadave@gmail.com', 'kadavepass@123', 'active');
+
+INSERT INTO User (first_name, last_name, email, password, account_status)
+VALUES ('Hritik', 'Londhe', 'hritiklondhe@gmail.com', 'londhepass@456', 'active');
+
+INSERT INTO User (first_name, last_name, email, password, account_status)
+VALUES ('Jane', 'Smith', 'janesmith@example.com', 'pass456', 'inactive');
+
+INSERT INTO User (first_name, last_name, email, password, account_status)
+VALUES ('Jane', 'Smith', 'janesmith@example.com', 'pass456', 'inactive');
+
+
+->Insert statements for the Book table:
+
+INSERT INTO Book (title, author, subject, isbn, publisher, publication_date, quantity, available_quantity)
+VALUES ('The Great Gatsby', 'F. Scott Fitzgerald', 'Fiction', '9780743273565', 'Scribner', '2004-09-30', 10, 10);
+
+INSERT INTO Book (title, author, subject, isbn, publisher, publication_date, quantity, available_quantity)
+VALUES ('To Kill a Mockingbird', 'Harper Lee', 'Fiction', '9780446310789', 'Grand Central Publishing', '1982-10-11', 5, 5);
+
+->Insert statements for the Borrowing table:
+
+INSERT INTO Borrowing (user_id, book_id, borrow_date, due_date, return_date, status)
+VALUES (1, 1, '2023-03-22', '2023-03-29', null, 'BORROWED');
+
+INSERT INTO Borrowing (user_id, book_id, borrow_date, due_date, return_date, status)
+VALUES (2, 2, '2023-03-22', '2023-03-29', null, 'BORROWED');
+
+->Insert statements for the Reservation table:
+
+INSERT INTO Reservation (user_id, book_id, reservation_date)
+VALUES (1, 2, '2023-03-22');
+
+INSERT INTO Reservation (user_id, book_id, reservation_date)
+VALUES (2, 1, '2023-03-22');
+
+->Insert statements for the Loan Management table:
+
+INSERT INTO Loan_Management (user_id, book_id, due_date, fine)
+VALUES (1, 1, '2023-03-29', 0);
+
+INSERT INTO Loan_Management (user_id, book_id, due_date, fine)
+VALUES (2, 2, '2023-03-29', 0);
+
+->Insert statements for the Reports table:
+
+INSERT INTO Reports (user_activity, book_status, fines_collected)
+VALUES ('Borrowed a book', 'In use', 0);
+
+INSERT INTO Reports (user_activity, book_status, fines_collected)
+VALUES ('Returned a book', 'Available', 0);
